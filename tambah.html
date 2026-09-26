@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookshelf - Tambah Buku</title>
+</head>
+<body>
+
+    <header>
+        <h1>My Bookshelf</h1>
+        <p>Aplikasi Manajemen Katalog Buku Pribadi</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Daftar Buku</a></li>
+            <li><a href="tambah.html">Tambah Buku Baru</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Form Tambah Buku</h2>
+        
+        <form action="#" method="POST">
+            <p>
+                <!-- Atribut "for" pada label harus sama dengan "id" pada input -->
+                <label for="judul_buku">Judul Buku:</label><br>
+                <input type="text" id="judul_buku" name="judul_buku" placeholder="Masukkan judul buku..." required>
+            </p>
+            
+            <p>
+                <label for="kategori_buku">Kategori:</label><br>
+                <select id="kategori_buku" name="kategori_buku">
+                    <option value="fiksi">Fiksi</option>
+                    <option value="non_fiksi">Non-Fiksi</option>
+                    <option value="biografi">Biografi</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="sinopsis_buku">Sinopsis Singkat:</label><br>
+                <textarea id="sinopsis_buku" name="sinopsis_buku" rows="5" cols="40" placeholder="Tuliskan sinopsis singkat di sini..."></textarea>
+            </p>
+
+            <p>
+                <button type="submit">Simpan Data Buku</button>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 Tugas Perkuliahan - Nama Anda</p>
+    </footer>
+
+</body>
+</html>
