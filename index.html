@@ -3,58 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Bookshelf - Daftar Buku</title>
+    <title>My Bookshelf - Dashboard Hybrid</title>
 </head>
 <body>
-
     <header>
-        <h1>My Bookshelf</h1>
-        <p>Aplikasi Manajemen Katalog Buku Pribadi</p>
+        <h1>My Bookshelf & Reading Hub</h1>
+        <p>Pusat kontrol koleksi buku fisik dan arsip artikel digital (Substack) milikku.</p>
     </header>
 
     <nav>
         <ul>
-            <li><a href="index.html">Daftar Buku</a></li>
-            <li><a href="tambah.html">Tambah Buku Baru</a></li>
+            <li><a href="index.html">Beranda (Katalog)</a></li>
+            <li><a href="tambah.html">Tambah Bacaan</a></li>
         </ul>
     </nav>
 
     <main>
-        <h2>Daftar Buku Saya</h2>
-        
-        <table border="1" cellpadding="10" cellspacing="0">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Judul Buku</th>
-                    <th>Penulis</th>
-                    <th>Status</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Laskar Pelangi</td>
-                    <td>Andrea Hirata</td>
-                    <td>Sudah Dibaca</td>
-                    <td><a href="detail.html">Lihat Detail</a></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Atomic Habits</td>
-                    <td>James Clear</td>
-                    <td>Sedang Dibaca</td>
-                    <td><a href="#">Lihat Detail</a></td>
-                </tr>
-            </tbody>
-        </table>
+        <section>
+            <h2>Daftar Bacaan</h2>
+            <p>Berikut adalah daftar buku dan artikel digital yang sedang atau sudah dibaca:</p>
+            
+            <table border="1" cellpadding="10" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Tipe</th>
+                        <th>Judul Bacaan</th>
+                        <th>Penulis / Sumber</th>
+                        <th>Kategori</th>
+                        <th>Aksi / Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Buku Fisik</td>
+                        <td><a href="detail.html">Laskar Pelangi</a></td>
+                        <td>Andrea Hirata</td>
+                        <td>Fiksi</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Substack</td>
+                        <td>Design Systems at Scale</td>
+                        <td>UI Engineering Weekly</td>
+                        <td>Teknologi</td>
+                        <td><a href="https://substack.com" target="_blank">Baca Artikel</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 
     <footer>
-        <hr>
-        <p>&copy; 2026 Tugas Perkuliahan</p>
+        <p> My Bookshelf</p>
     </footer>
-
 </body>
-</html> 
+</html>

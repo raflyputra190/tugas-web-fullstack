@@ -3,56 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Bookshelf - Tambah Buku</title>
+    <title>Tambah Bacaan - My Bookshelf</title>
 </head>
 <body>
-
     <header>
-        <h1>My Bookshelf</h1>
-        <p>Aplikasi Manajemen Katalog Buku Pribadi</p>
+        <h1>Tambah Bacaan Baru</h1>
+        <p>Catat buku fisik atau artikel Substack favoritmu di sini.</p>
     </header>
 
     <nav>
         <ul>
-            <li><a href="index.html">Daftar Buku</a></li>
-            <li><a href="tambah.html">Tambah Buku Baru</a></li>
+            <li><a href="index.html">Beranda (Katalog)</a></li>
+            <li><a href="tambah.html">Tambah Bacaan</a></li>
         </ul>
     </nav>
 
     <main>
-        <h2>Form Tambah Buku</h2>
-        
-        <form action="#" method="POST">
-            <p>
-                <!-- Atribut "for" pada label harus sama dengan "id" pada input -->
-                <label for="judul_buku">Judul Buku:</label><br>
-                <input type="text" id="judul_buku" name="judul_buku" placeholder="Masukkan judul buku..." required>
-            </p>
-            
-            <p>
-                <label for="kategori_buku">Kategori:</label><br>
-                <select id="kategori_buku" name="kategori_buku">
-                    <option value="fiksi">Fiksi</option>
-                    <option value="non_fiksi">Non-Fiksi</option>
-                    <option value="biografi">Biografi</option>
-                </select>
-            </p>
-
-            <p>
-                <label for="sinopsis_buku">Sinopsis Singkat:</label><br>
-                <textarea id="sinopsis_buku" name="sinopsis_buku" rows="5" cols="40" placeholder="Tuliskan sinopsis singkat di sini..."></textarea>
-            </p>
-
-            <p>
-                <button type="submit">Simpan Data Buku</button>
-            </p>
-        </form>
+        <section>
+            <h2>Formulir Input Bacaan</h2>
+            <form action="index.html" method="GET">
+                <div>
+                    <label for="tipe">Tipe Bacaan:</label><br>
+                    <select id="tipe" name="tipe" required>
+                        <option value="">-- Pilih Tipe --</option>
+                        <option value="Buku Fisik">Buku Fisik</option>
+                        <option value="E-Book">E-Book</option>
+                        <option value="Substack">Substack / Artikel Digital</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="judul">Judul Bacaan / Artikel:</label><br>
+                    <input type="text" id="judul" name="judul" placeholder="Contoh: Atomic Habits atau Judul Artikel Substack" required style="width: 300px;">
+                </div>
+                <br>
+                <div>
+                    <label for="sumber">Penulis / Nama Newsletter:</label><br>
+                    <input type="text" id="sumber" name="sumber" placeholder="Contoh: James Clear / The Pragmatic Engineer" required style="width: 300px;">
+                </div>
+                <br>
+                <div>
+                    <label for="url">Link / URL (Khusus Substack / Digital):</label><br>
+                    <input type="url" id="url" name="url" placeholder="https://substack.com/..." style="width: 300px;">
+                </div>
+                <br>
+                <div>
+                    <label for="kategori">Kategori Topik:</label><br>
+                    <input type="text" id="kategori" name="kategori" placeholder="Contoh: Teknologi, Self-Improvement, Bisnis" required style="width: 300px;">
+                </div>
+                <br>
+                <div>
+                    <label for="sinopsis">Catatan / Sinopsis Singkat:</label><br>
+                    <textarea id="sinopsis" name="sinopsis" rows="4" placeholder="Tulis ringkasan atau poin penting..." style="width: 300px;"></textarea>
+                </div>
+                <br>
+                <button type="submit">Simpan Bacaan</button>
+            </form>
+        </section>
     </main>
 
     <footer>
-        <hr>
-        <p>&copy; 2026 Tugas Perkuliahan</p>
+        <p> My Bookshelf </p>
     </footer>
-
 </body>
 </html>
