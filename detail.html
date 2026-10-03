@@ -3,48 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Bookshelf - Detail Buku</title>
+    <title>Detail Bacaan - My Bookshelf</title>
+    <!-- Manggil CSS yang udah kita buat -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1>My Bookshelf</h1>
-        <p>Aplikasi Manajemen Katalog Buku Pribadi</p>
+        <h1>Detail Bacaan</h1>
+        <p>Informasi lengkap tentang buku atau artikel pilihan.</p>
     </header>
 
     <nav>
         <ul>
-            <li><a href="index.html">Daftar Buku</a></li>
-            <li><a href="tambah.html">Tambah Buku Baru</a></li>
+            <li><a href="index.html">Beranda (Katalog)</a></li>
+            <li><a href="tambah.html">Tambah Bacaan</a></li>
         </ul>
     </nav>
 
     <main>
-        <article>
-            <h2>Detail Buku: Laskar Pelangi</h2>
-            
-            <!-- Atribut "alt" wajib diisi untuk mendeskripsikan gambar -->
-            <img src="buku.jpg" alt="Gambar sampul depan buku Laskar Pelangi cetakan pertama" width="250">
-            
-            <h3>Informasi Buku</h3>
-            <ul>
-                <li><strong>Penulis:</strong> Andrea Hirata</li>
-                <li><strong>Kategori:</strong> Fiksi</li>
-                <li><strong>Status:</strong> Sudah Dibaca</li>
-            </ul>
+        <!-- Dibungkus container biar dapet efek kotak putih berbayang -->
+        <div class="container">
+            <section>
+                <!-- Inline style dikit biar judulnya lebih rapi -->
+                <h2 style="margin-top: 0; color: #2c3e50; border-bottom: 2px solid #1abc9c; padding-bottom: 10px;">Atomic Habits</h2>
+                
+                <p><strong>Tipe Bacaan:</strong> Buku Fisik</p>
+                <p><strong>Penulis / Sumber:</strong> James Clear</p>
+                <p><strong>Kategori:</strong> Self-Improvement</p>
+                
+                <hr style="border: 0; border-top: 1px dashed #ccc; margin: 20px 0;">
+                
+                <h3>Catatan / Sinopsis:</h3>
+                <!-- Text-align justify biar paragrafnya rata kanan-kiri -->
+                <p style="line-height: 1.6; text-align: justify;">
+                    Buku ini membahas tentang bagaimana perubahan-perubahan kecil (atomic) 
+                    dalam kebiasaan sehari-hari bisa memberikan dampak yang luar biasa besar 
+                    dalam jangka panjang. Fokus pada sistem pembentukan kebiasaan, bukan hanya sekadar menetapkan tujuan.
+                </p>
 
-            <h3>Sinopsis</h3>
-            <p>Novel ini bercerita tentang kehidupan 10 anak dari keluarga miskin yang bersekolah di SD dan SMP Muhammadiyah di Belitung yang penuh dengan keterbatasan. Namun, keterbatasan itu tidak mematikan semangat mereka untuk belajar dan meraih mimpi.</p>
-            
-            <br>
-            <a href="index.html">&larr; Kembali ke Daftar Buku</a>
-        </article>
+                <br>
+                <!-- Tombol kembali yang dikasih style mirip tombol beneran -->
+                <a href="index.html" style="display: inline-block; padding: 10px 20px; background-color: #34495e; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                    &larr; Kembali ke Katalog
+                </a>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <hr>
-        <p> My Bookshelf </p>
+        <p>2026 My Bookshelf Hybrid Platform. Dibuat dengan semangat literasi.</p>
     </footer>
-
 </body>
 </html>
