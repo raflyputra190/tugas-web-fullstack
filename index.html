@@ -3,64 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Bookshelf - Dashboard Hybrid</title>
-    <link rel="stylesheet" href="style.css">
+    <title>My Bookshelf - Dashboard Bootstrap</title>
+    <!-- Manggil Bootstrap 5 lewat CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>My Bookshelf & Reading Hub</h1>
-        <p>Pusat kontrol koleksi buku fisik dan arsip artikel digital (Substack) milikku.</p>
-    </header>
+<body class="bg-light">
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Beranda (Katalog)</a></li>
-            <li><a href="tambah.html">Tambah Bacaan</a></li>
-        </ul>
+    <!-- Navbar Responsif -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">📚 My Bookshelf</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tambah.html">Tambah Data</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <main>
-        <div class="container">
-        <section>
-            <h2>Daftar Bacaan</h2>
-            <p>Berikut adalah daftar buku dan artikel digital yang sedang atau sudah dibaca:</p>
-            
-            <table border="1" cellpadding="10" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Tipe</th>
-                        <th>Judul Bacaan</th>
-                        <th>Penulis / Sumber</th>
-                        <th>Kategori</th>
-                        <th>Aksi / Link</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Buku Fisik</td>
-                        <td><a href="detail.html">Laskar Pelangi</a></td>
-                        <td>Andrea Hirata</td>
-                        <td>Fiksi</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Substack</td>
-                        <td>Design Systems at Scale</td>
-                        <td>UI Engineering Weekly</td>
-                        <td>Teknologi</td>
-                        <td><a href="https://substack.com" target="_blank">Baca Artikel</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+    <!-- Konten Utama dengan Sistem Grid -->
+    <div class="container mt-4">
+        <!-- Judul Dashboard (Row 1) -->
+        <div class="row mb-3">
+            <div class="col-12 text-center">
+                <h2 class="fw-bold text-primary">Daftar Bacaan</h2>
+                <p class="text-muted">Koleksi buku fisik dan artikel digital (Substack) milikku.</p>
+            </div>
         </div>
-    </main>
 
-    <footer>
-        <p> My Bookshelf</p>
-    </footer>
+        <!-- Tabel Data (Row 2) -->
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <!-- Tabel otomatis responsif kalau layar sempit -->
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped mb-0">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Tipe</th>
+                                        <th>Judul Bacaan</th>
+                                        <th>Penulis / Sumber</th>
+                                        <th>Kategori</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><span class="badge bg-success">Buku Fisik</span></td>
+                                        <td class="fw-bold">Laskar Pelangi</td>
+                                        <td>Andrea Hirata</td>
+                                        <td>Fiksi</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><span class="badge bg-info text-dark">Substack</span></td>
+                                        <td class="fw-bold">Design Systems at Scale</td>
+                                        <td>UI Engineering Weekly</td>
+                                        <td>Teknologi</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Wajib Bootstrap buat navbar dropdown/collapse -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

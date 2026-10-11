@@ -4,54 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Bacaan - My Bookshelf</title>
-    <!-- Manggil CSS yang udah kita buat -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Manggil Bootstrap 5 lewat CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>Detail Bacaan</h1>
-        <p>Informasi lengkap tentang buku atau artikel pilihan.</p>
-    </header>
+<body class="bg-light">
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Beranda (Katalog)</a></li>
-            <li><a href="tambah.html">Tambah Bacaan</a></li>
-        </ul>
+    <!-- Navbar Responsif -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">📚 My Bookshelf</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tambah.html">Tambah Data</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <main>
-        <!-- Dibungkus container biar dapet efek kotak putih berbayang -->
-        <div class="container">
-            <section>
-                <!-- Inline style dikit biar judulnya lebih rapi -->
-                <h2 style="margin-top: 0; color: #2c3e50; border-bottom: 2px solid #1abc9c; padding-bottom: 10px;">Atomic Habits</h2>
-                
-                <p><strong>Tipe Bacaan:</strong> Buku Fisik</p>
-                <p><strong>Penulis / Sumber:</strong> James Clear</p>
-                <p><strong>Kategori:</strong> Self-Improvement</p>
-                
-                <hr style="border: 0; border-top: 1px dashed #ccc; margin: 20px 0;">
-                
-                <h3>Catatan / Sinopsis:</h3>
-                <!-- Text-align justify biar paragrafnya rata kanan-kiri -->
-                <p style="line-height: 1.6; text-align: justify;">
-                    Buku ini membahas tentang bagaimana perubahan-perubahan kecil (atomic) 
-                    dalam kebiasaan sehari-hari bisa memberikan dampak yang luar biasa besar 
-                    dalam jangka panjang. Fokus pada sistem pembentukan kebiasaan, bukan hanya sekadar menetapkan tujuan.
-                </p>
+    <!-- Konten Utama Detail -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-dark text-white">
+                        <h5 class="mb-0">Detail Bacaan</h5>
+                    </div>
+                    <div class="card-body p-4">
+                        <h3 class="fw-bold text-primary mb-3">Design Systems at Scale</h3>
+                        
+                        <table class="table table-borderless mb-4">
+                            <tbody>
+                                <tr>
+                                    <th style="width: 150px;" class="text-muted">Tipe</th>
+                                    <td><span class="badge bg-info text-dark">Substack</span></td>
+                                </tr>
+                                <tr>
+                                    <th class="text-muted">Penulis / Sumber</th>
+                                    <td class="fw-bold">UI Engineering Weekly</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-muted">Kategori</th>
+                                    <td>Teknologi</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-muted">Status</th>
+                                    <td><span class="badge bg-success">Selesai Dibaca</span></td>
+                                </tr>
+                                <tr>
+                                    <th class="text-muted">Catatan</th>
+                                    <td>Artikel ini ngebahas cara mengatur komponen UI biar gampang dipakai ulang sama tim developer lain.</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                <br>
-                <!-- Tombol kembali yang dikasih style mirip tombol beneran -->
-                <a href="index.html" style="display: inline-block; padding: 10px 20px; background-color: #34495e; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
-                    &larr; Kembali ke Katalog
-                </a>
-            </section>
+                        <div class="d-flex justify-content-between border-top pt-3">
+                            <a href="index.html" class="btn btn-outline-secondary">&larr; Kembali ke Dashboard</a>
+                            <div>
+                                <button class="btn btn-warning text-dark me-2">Edit</button>
+                                <button class="btn btn-danger">Hapus</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </main>
+    </div>
 
-    <footer>
-        <p>2026 My Bookshelf Hybrid Platform. Dibuat dengan semangat literasi.</p>
-    </footer>
+    <!-- Script Wajib Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
